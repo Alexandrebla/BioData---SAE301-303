@@ -1,0 +1,319 @@
+#hero1 {
+  height: 70vh;
+  background: url('../img/imgfond.jpg') no-repeat center center/cover;
+}
+
+#hero2 {
+  height: 60vh;
+  background: url('../img/art1.jpg') no-repeat center center/cover;
+  background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#hero3 {
+  height: 80vh;
+  background: url('../img/cible2.jpg') no-repeat center center/cover;
+  background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#hero4 {
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url('../img/img_fondart5.jpg') no-repeat center center/cover;
+}
+
+#hero5 {
+  height: 80vh;
+  background: url('../img/page5.jpg') no-repeat center center/cover;
+  background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#hero1 h1 {
+  animation: fadeInDown 1.5s;
+}
+
+.card.hover-effect:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+footer form input:hover {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.8);
+}
+
+body {
+  font-family: Times, Times New Roman, serif;
+}
+
+.navbar {
+  background-color: transparent !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  backdrop-filter: blur(5px);
+}
+
+.navbar-nav .nav-link {
+  position: relative; 
+  z-index: 1; 
+  color: white !important; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  text-decoration: none; 
+  transition: color 0.3s ease, text-decoration-color 0.3s ease; 
+
+}
+
+.navbar-nav .nav-link:hover {
+  transform: scale(1.2); 
+  text-decoration: underline;
+  text-decoration-thickness: 2px; 
+  text-underline-offset: 4px; 
+  text-decoration-color: currentColor; 
+  
+}
+
+.nav-item.dropdown {
+  position: relative; 
+}
+
+.nav-item.dropdown .dropdown-menu {
+  display: none; 
+  position: absolute; 
+  top: 100%; 
+  left: 0;
+  background-color: white; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  z-index: 1000; 
+  padding: 0; 
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block; 
+}
+
+.dropdown-item {
+  padding: 10px 20px; 
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa; 
+  color: #000; 
+}
+
+.intro{
+  margin-top: 30px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  margin-left: 100px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 20px;
+}
+
+.mb-45 {
+  display: inline; 
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-underline-offset: 4px;
+  text-decoration-color: black;
+  background-color: rgba(0, 128, 0, 0.5); 
+  padding: 0 5px;
+}
+
+.mb-46 {
+  display: block; 
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 4.5px;
+  text-underline-offset: 4px;
+  text-decoration-color: black;
+  background-color: rgba(0, 128, 0, 0.5); 
+  padding: 0 5px; 
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+.info1{
+  font-size: 32.5px;
+  text-align: left;
+}
+
+.info2{
+  font-size: 32.5px;
+  text-align: left;
+
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+img.famille {
+  width: 1200px;
+  padding-bottom: 100px;
+}
+
+.biodat1 {
+  text-align: center; 
+  font-size: 100px; 
+  margin: 20px 0; 
+  text-decoration: underline black;
+  text-decoration-thickness: 6px;
+}
+
+.biodat2 {
+  text-align: center; 
+  font-size: 50px; 
+  margin: 20px 200px; 
+  margin-bottom: 150px;
+}
+
+.highlight {
+  text-decoration: underline; 
+  color: green; 
+  font-size: 60px;
+}
+
+.navbar.scrolled .nav-link {
+  color: black !important; 
+}
+
+.navbar.scrolled .navbar-brand {
+  color: black !important;
+}
+
+.navbar .nav-link {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.navbar .navbar-brand {
+  color: white !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.navbar.scrolled .nav-link {
+  color: black !important;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); 
+}
+
+.navbar.scrolled .navbar-brand {
+  color: black !important;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); 
+}
+
+#logo{
+  height: 70px;
+}
+
+.intro2{
+  font-size: 29px;
+  text-align: center;
+}
+
+.titreM{
+  text-align: center;
+  font-size: 70px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  text-decoration: underline;
+  text-decoration-color: green;
+}
+
+.p-4{
+  font-size: 30px;
+}
+
+h3{
+  font-size: 40px;
+  text-decoration: underline;
+}
+
+h4{
+  font-size: 30px;
+  text-decoration: underline;
+  text-decoration-color: green;
+  margin-bottom: 40px;
+}
+
+.piliers{
+  font-size: 20px;
+}
+
+.pourcentage {
+  font-size: 150px;
+  font-weight: bold;
+  background-color: rgba(0, 128, 0, 0.5); 
+  padding: 0 5px; 
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease; 
+  margin-top: 70px;
+}
+
+.col-lg-6 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.col-lg-6 span {
+  margin-top: 10px; 
+  transition: text-decoration 0.3s ease; 
+}
+
+.col-lg-6:hover .pourcentage {
+  transform: scale(1.25); 
+  background-color: rgba(0, 128, 0, 0.7); 
+}
+
+.col-lg-6:hover span {
+  text-decoration: underline; 
+}
+
+
+span{
+  font-size: 40px;
+  padding-bottom: 40px;
+}
+
+.fw-bold{
+  font-size: 40px;
+  text-decoration: underline;
+  text-decoration-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="style/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="./script/Remonte.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar navbar-expand-lg bg-white shadow sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html"><img src="./img/Logo vert.png" alt="" id="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">About</a></li>
+          <!-- Menu déroulant -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#articles" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+              En Savoir Plus
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./html/Page1-Biocontrole.html">Le Biocontrole</a></li>
+              <li><a class="dropdown-item" href="./html/Page2-Cibles.html">Les Cibles du Biocontrole</a></li>
+              <li><a class="dropdown-item" href="./html/Page3-Partietraité.html">Parties et Méthodes</a></li>
+              <li><a class="dropdown-item" href="./html/Page4-info.html">Informations supplémentaires</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#contact" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+  <!-- Hero Section -->
+  <section id="hero1" class="d-flex align-items-center">
+    <div class="container text-white">
+      <div class="p-4 rounded">
+        <h1 class="display-1 fw-bold animate__animated animate__fadeInDown text-start" style="font-size: 150px;">BIODATA</h1>
+        <p class="lead animate__animated animate__fadeInUp text-start" style="font-size: 28px; margin-left: 5px;">
+          Bienvenue sur Biodata, votre espace dédié au biocontrôle et à la lutte biologique
+        </p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <p class="intro">
+        Dans les champs, sous serre et en plein air, mais aussi dans les parcs et les jardins, des méthodes alternatives aux produits phytopharmaceutiques conventionnels peuvent être utilisées pour lutter contre les maladies, les agresseurs de cultures (insectes, virus, bactéries, acariens…) et les mauvaises herbes. Ces méthodes, réunies sous le terme « biocontrôle », s’appuient sur les mécanismes et interactions existant dans la nature.
+      </p>
+
+      <h2 class="mb-45">Qu'est-ce que le biocontrôle ?</h2>
+
+      <div class="row align-items-center" style="margin-top: 60px; margin-bottom: 40px;">
+        <!-- Texte -->
+        <div class="col-lg-6">
+          
+          <p class="info1">
+            Le biocontrôle regroupe des méthodes naturelles et innovantes pour protéger les cultures face aux bioagresseurs, tout en limitant l’impact sur l’environnement et la santé humaine. En privilégiant des solutions basées sur la régulation naturelle plutôt que l’éradication, ces approches s’intègrent harmonieusement dans une gestion durable des cultures.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div class="col-lg-6 text-center">
+          <img src="img/info1.jpg" class="img-fluid rounded" alt="Biocontrôle">
+        </div>
+      </div>
+
+      <div class="row align-items-center" style="margin-top: 70px;">
+        <!-- Texte -->
+        <div class="col-lg-12">
+          <p class="info2">
+            À travers la détection précoce des bioagresseurs et l’utilisation combinée de leviers agronomiques, génétiques, variétaux ou physiques, le biocontrôle contribue à réduire l’usage des produits phytopharmaceutiques conventionnels. Il fait partie intégrante de la Protection Intégrée des Cultures, une démarche clé de l’agroécologie.
+          </p>
+        </div>
+      </div>
+
+      <div class="row align-items-center" style="margin-bottom: 100px; margin-top: 25px;">
+        <!-- Modèle 3D -->
+    <div class="sketchfab-embed-wrapper" style="display: flex; justify-content: center;">
+      <model-viewer src="./3D/ADN1.glb"
+        camera-controls
+        autoplay
+        style="width: 100%; height: 80vh; max-width: 100vw; background-color: #7fbf7f;"
+        auto-rotate
+        rotation-per-second="60deg"
+        field-of-view="100deg">
+      </model-viewer>
+    </div>
+      </div>
+
+      <h2 class="mb-45">Quelles sont les différentes méthodes de biocontrôle ?</h2>
+    </div>
+  </section>
+
+  <p style="margin-left: 200px; font-size: 30px;">Il existe 4 familles de solutions de biocontrôle :</p>
+  <div class="center">
+    <img class="famille" src="img/img_biocontrole.png" alt="Image présentant les 4 méthodes de Biocontrôle">
+  </div>
+  
+  <p class="biodat1">
+    Chez Biodata,
+  </p>
+  <p class="biodat2">
+    découvrez comment ces solutions <span class="highlight">préventives et respectueuses de l’écosystème</span> peuvent transformer durablement la gestion des cultures.
+  </p>
+  
+  <!-- Bouton de remontée -->
+<a href="#about" id="backToIntro" class="btn btn-success" style="
+height: 70px;
+width: 70px;
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1000;
+display: none;
+padding: 10px 20px;
+border-radius: 50px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+font-size: 31px;">
+↑
+</a>
+
+ 
+  <!-- Articles Section -->
+  <section id="articles" class="py-5 bg-light" style="margin-bottom: 50px;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="font-size: 65px; margin-bottom: 50px;">En Savoir Plus</h2>
+      <div class="row g-4">
+        <div class="col-md-4 col-lg-6">
+          <a href="./html/Page1-Biocontrole.html" class="text-decoration-none">
+            <div class="card shadow-sm h-100 hover-effect">
+              <img src="img/art1.jpg" class="card-img-top" alt="Article 1">
+              <div class="card-body text-center">
+                <p class="fw-bold">Le Biocontrole</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 col-lg-6" style="padding-bottom: 70px;">
+          <a href="./html/Page2-Cibles.html" class="text-decoration-none">
+            <div class="card shadow-sm h-100 hover-effect">
+              <img src="./img/cible2.jpg" class="card-img-top" alt="Article 2">
+              <div class="card-body text-center">
+                <p class="fw-bold">Les Cibles du Biocontrole</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        </div>
+
+        <div class="row" style="margin-top: 30px;">
+          <div class="col-md-6 col-lg-6" style="padding-bottom: 195px;">
+            <a href="./html/Page3-Partietraité.html" class="text-decoration-none">
+              <div class="card shadow-sm h-100 hover-effect">
+                <img src="./img/img_fondart5.jpg" class="card-img-top" alt="Article 4">
+                <div class="card-body text-center">
+                  <p class="fw-bold">Parties et Méthodes</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-6 ms-auto" style="height: 370px;">
+              <a href="./html/Page4-info.html" class="text-decoration-none">
+                <div class="card shadow-sm h-100 hover-effect">
+                  <img src="./img/page5.jpg" class="card-img-top" alt="Article 4">
+                  <div class="card-body text-center">
+                    <p class="fw-bold">Informations supplémentaires</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Footer Section -->
+<footer id="contact" class="py-5 bg-dark text-white text-center">
+  <h2>Contact</h2>
+  <p>&copy; 2024 Biodata - Tous droits réservés.</p>
+  <form class="d-flex flex-column align-items-center">
+    <div class="mb-3 w-50">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="email" placeholder="Votre e-mail" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+</footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./script/défilement.js" defer></script>
+</body>
+</html>
