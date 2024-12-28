@@ -64,7 +64,7 @@
 
   <p class="intro2">
     Si vous souhaitez connaître les informations des différents projets du biocontrôle, vous êtes au bon endroit. Consulter les projets réalisés dans chaque
-    <a href="#chart1" style="color: rgba(0, 128, 0, 0.5); font-size: 33px;">départements</a>et leurs <a href="#chart2" style="color: rgba(0, 128, 0, 0.5); font-size: 33px;">périodes d'expérimentation</a>.
+    <a href="#chart1" style="color: rgba(0, 128, 0, 0.5); font-size: 33px;">départements</a>, leurs <a href="#chart2" style="color: rgba(0, 128, 0, 0.5); font-size: 33px;">périodes d'expérimentation</a> et les projets associés <a href="#chart4" style="color: rgba(0, 128, 0, 0.5); font-size: 33px;">a plusieurs sites</a>. 
   </p>
 </section>
 
@@ -80,6 +80,12 @@
 <div class="row" style="margin-top: 100px; margin-bottom: 200px;">
   <div class="col-md-12">
     <canvas id="chart2"></canvas>
+  </div>
+</div>
+
+<div class="row" style="margin-top: 100px; margin-bottom: 200px;">
+  <div class="col-md-12">
+    <canvas id="chart4"></canvas>
   </div>
 </div>
 </div>
@@ -266,6 +272,78 @@ font-size: 31px;">
             }
         });
     });
+
+    // D3.js: Load CSV data
+d3.csv('data1.csv').then(function(data) {
+    // Grouper les données par Nom_du_projet et collecter les sites expérimentaux
+    const groupedData = {};
+
+    data.forEach(row => {
+        const projet = row.Nom_du_projet;
+        const site = row.Site_expérimental;
+
+        if (!groupedData[projet]) {
+            groupedData[projet] = new Set();
+        }
+
+        groupedData[projet].add(site);
+    });
+
+    // Filtrer les projets associés à plusieurs sites
+    const filteredProjects = Object.entries(groupedData)
+        .filter(([projet, sites]) => sites.size > 1)
+        .reduce((acc, [projet, sites]) => {
+            acc[projet] = Array.from(sites);
+            return acc;
+        }, {});
+
+    // Préparer les données pour Chart.js
+    const labels = Object.keys(filteredProjects); // Noms des projets
+    const siteCounts = labels.map(projet => filteredProjects[projet].length); // Nombre de sites par projet
+
+    const chartData = {
+        labels: labels,
+        datasets: [{
+            label: 'Nombre de sites expérimentaux',
+            data: siteCounts,
+            backgroundColor: labels.map(() => `#${Math.floor(Math.random() * 16777215).toString(16)}`) // Couleurs aléatoires
+        }]
+    };
+
+    // Créer le graphique en format donut
+    const ctx = document.getElementById('chart4').getContext('2d'); // Assurez-vous d'utiliser un canvas avec ID 'chart2'
+    new Chart(ctx, {
+        type: 'doughnut', // Changez en 'pie' pour un camembert
+        data: chartData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Répartition des projets associés à plusieurs sites',
+                    font: {
+                            size: 40
+                        },
+                        padding: {
+                            bottom: 40 
+                        }
+                },
+                tooltip: {
+                    callbacks: {
+                        afterLabel: function(context) {
+                            const projet = context.label;
+                            const count = context.raw;
+                            return `Nombre de sites: ${count}`;
+                        }
+                    }
+                }
+            }
+        }
+    });
+});
     </script>
     
 </body>
