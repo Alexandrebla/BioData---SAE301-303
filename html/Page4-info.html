@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="../style/styles.css">
+  <script src="../script/Remonte.js" defer></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.0/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar navbar-expand-lg bg-white shadow sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img src="../img/Logo vert.png" alt="" id="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#chart1" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Par Code Postal</a></li>
+            <li class="nav-item"><a class="nav-link" href="#chart2" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Periode</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#articles" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+              En Savoir Plus
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Page1-Biocontrole.html">Le Biocontrole</a></li>
+              <li><a class="dropdown-item" href="Page2-Cibles.html">Les Cibles du Biocontrole</a></li>
+              <li><a class="dropdown-item" href="Page3-Partietraité.html">Parties et Méthodes</a></li>
+              <li><a class="dropdown-item" href="Page4-info.html">Informations supplémentaires</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#contact" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero5" class="d-flex align-items-center">
+  <div class="container text-white">
+    <div class="p-4 rounded">
+      <h1 class="display-1 fw-bold animate__animated animate__fadeInDown text-start" style="font-size: 100px; ">Informations supplémentaires</h1>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+
+  <div class="row" style="margin-top: 100px; margin-bottom: 90px;">
+      <div class="col-lg-2"></div>
+      <h2 class="mb-45" style="font-size: 100px; font-size: 72px;" id="ciblez">Les projets et expérimentations</h2>
+      <div class="col-lg-2"></div>
+  </div>
+
+  <p class="intro2">
+    Si vous souhaitez connaître les informations des différents projets du biocontrôle, vous êtes au bon endroit. Consulter les projets réalisés dans chaque
+    <a href="#chart1" style="color: rgba(0, 128, 0, 0.5); font-size: 33px;">départements</a>et leurs <a href="#chart2" style="color: rgba(0, 128, 0, 0.5); font-size: 33px;">périodes d'expérimentation</a>.
+  </p>
+</section>
+
+<!-- Conteneur des graphiques -->
+<div class="container">
+
+<div class="row" style="margin-top: 100px; margin-bottom: 200px;">
+  <div class="col-md-12">
+    <canvas id="chart1"></canvas>
+  </div>
+</div>
+
+<div class="row" style="margin-top: 100px; margin-bottom: 200px;">
+  <div class="col-md-12">
+    <canvas id="chart2"></canvas>
+  </div>
+</div>
+</div>
+
+  <!-- Bouton de remontée -->
+<a href="#ciblez" id="backToIntro" class="btn btn-success" style="
+height: 70px;
+width: 70px;
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1000;
+display: none;
+padding: 10px 20px;
+border-radius: 50px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+font-size: 31px;">
+↑
+</a>
+
+  <!-- Articles Section -->
+<section id="articles" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">En Savoir Plus</h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Première carte -->
+      <div class="col-md-12 col-lg-6">
+        <a href="Page1-Biocontrole.html" class="text-decoration-none">
+          <div class="card shadow-sm hover-effect h-100">
+            <img src="../img/art1.jpg" class="card-img-top" alt="Article 1">
+            <div class="card-body text-center">
+              <p class="fw-bold">Le Biocontrole</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Deuxième carte -->
+      <div class="col-md-12 col-lg-6 mx-auto">
+        <a href="Page2-Cibles.html" class="text-decoration-none">
+          <div class="card shadow-sm hover-effect h-100">
+            <img src="../img/cible2.jpg" class="card-img-top" alt="Article 5">
+            <div class="card-body text-center">
+              <p class="fw-bold">Les Cibles du Biocontrole</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Dernière carte centrée -->
+      <div class="col-md-12 col-lg-6">
+        <a href="Page3-Partietraité.html" class="text-decoration-none">
+          <div class="card shadow-sm hover-effect h-100">
+            <img src="../img/img_fondart5.jpg" class="card-img-top" alt="Article 4">
+            <div class="card-body text-center">
+              <p class="fw-bold">Parties et Méthodes</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  
+
+  <!-- Footer Section -->
+  <footer id="contact" class="py-5 bg-dark text-white text-center">
+    <h2>Contact</h2>
+    <form class="d-flex flex-column align-items-center">
+      <div class="mb-3 w-50">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="Votre e-mail" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+    </form>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../script/défilement.js" defer></script>
+  <script>
+
+    d3.csv('data1.csv').then(function(data) {
+    
+        const groupedData = {};
+    
+        data.forEach(row => {
+            const codePostal = row.Code_postal_site;
+            const projet = row.Nom_du_projet;
+    
+            if (!groupedData[codePostal]) {
+                groupedData[codePostal] = new Set();
+            }
+    
+            groupedData[codePostal].add(projet);
+        });
+    
+        const labels = Object.keys(groupedData);
+        const projectCounts = labels.map(code => groupedData[code].size);
+    
+        const chartData = {
+            labels: labels,
+            datasets: [{
+                label: 'Nombre de projets',
+                data: projectCounts,
+                backgroundColor: labels.map(() => `#${Math.floor(Math.random()*16777215).toString(16)}`)
+            }]
+        };
+    
+        const ctx = document.getElementById('chart1').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Nombre de projets par code postal',
+                        font: {
+                            size: 40 
+                        },
+                        padding: {
+                            bottom: 40 
+                        }
+                    }
+                }
+            }
+        });
+    });
+    
+    
+    d3.csv('data1.csv').then(function(data) {
+    
+        const groupedData = {};
+    
+        data.forEach(row => {
+            const periode = row.Période_expérimentation; 
+            const projet = row.Nom_du_projet;
+    
+            if (!groupedData[periode]) {
+                groupedData[periode] = new Set();
+            }
+    
+            groupedData[periode].add(projet);
+        });
+    
+        const labels = Object.keys(groupedData);
+        const projectCounts = labels.map(periode => groupedData[periode].size);
+    
+        const chartData = {
+            labels: labels,
+            datasets: [{
+                label: 'Nombre de projets',
+                data: projectCounts,
+                backgroundColor: labels.map(() => `#${Math.floor(Math.random() * 16777215).toString(16)}`)
+            }]
+        };
+    
+        const ctx = document.getElementById('chart2').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Nombre de projets par période d\'expérimentation',
+                        font: {
+                            size: 40
+                        },
+                        padding: {
+                            bottom: 40 
+                        }
+                    }
+                }
+            }
+        });
+    });
+    </script>
+    
+</body>
+</html>

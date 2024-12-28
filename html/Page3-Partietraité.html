@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les parties traitées</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="../script/défilement.js" defer></script>
+  <script src="../script/Remonte.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar navbar-expand-lg bg-white shadow sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img src="../img/Logo vert.png" alt="" id="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#intro" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Introduction</a></li>
+            <li class="nav-item"><a class="nav-link" href="#part_ext" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Parties aériennes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mode_action" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Mode d'action</a></li>
+            <li class="nav-item"><a class="nav-link" href="#groupe_cible" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Etude de cas</a></li>
+          <!-- Menu déroulant -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#articles" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+              En Savoir Plus
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Page1-Biocontrole.html">Le Biocontrole</a></li>
+              <li><a class="dropdown-item" href="Page2-Cibles.html">Les Cibles du Biocontrole</a></li>
+              <li><a class="dropdown-item" href="Page3-Partietraité.html">Parties et Méthodes</a></li>
+              <li><a class="dropdown-item" href="Page4-info.html">Informations supplémentaires</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#contact" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+  <section id="hero4" class="d-flex align-items-center bg-success text-white">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold">Le Biocontrôle en Action : Parties et Méthodes</h1>
+      <p class="lead">
+        Découvrez comment le biocontrôle agit au cœur des écosystèmes pour une agriculture durable et respectueuse de l’environnement.
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 1 : Introduction -->
+  <section id="intro" class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+              <p>
+                Face à la nécessité d’une agriculture durable, le biocontrôle se distingue comme une alternative respectueuse de l’environnement aux solutions chimiques traditionnelles. En ciblant spécifiquement les parties aériennes (feuilles, tiges) et souterraines (racines, sol), il offre des traitements adaptés pour une gestion efficace des cultures.
+            </p>
+            <p>
+                Cette approche ciblée maximise l’efficacité des interventions tout en réduisant leur impact sur les écosystèmes. Les parties aériennes, fréquemment exposées aux ravageurs et aux maladies, nécessitent des solutions rapides et spécifiques, tandis que les parties souterraines bénéficient de stratégies favorisant la santé des sols et leur fertilité à long terme.
+            </p>
+            <h4>Objectifs de cet article :</h4>
+            <ul>
+                <li>Analyser les bénéfices distincts des traitements aériens et souterrains.</li>
+                <li>Présenter les différents modes d’action du biocontrôle (répulsion, prédation, parasitisme, inhibition).</li>
+                <li>Illustrer ces approches par des exemples concrets et des données visuelles.</li>
+                <li>Démontrer comment une application ciblée peut révolutionner les pratiques agricoles grâce à une synergie entre science et terrain.</li>
+            </ul>            
+            </div>
+            <div class="col-md-5 offset-md-1 text-center">
+                <img src="../img/Partie_traitées.png" alt="Parties traitées" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2 : Parties traitées -->
+<section id="part_ext" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <h1 class="text-center">Les parties traitées</h1>
+      <div class="col-md-6">
+        <h3 class="text-center mb-4">Parties aériennes</h3>
+        <p>
+          Les parties aériennes regroupent les feuilles, les tiges, et parfois les fleurs des plantes, premières à être exposées aux attaques extérieures.
+        </p>
+        <h4>Biocontrôles adaptés aux parties aériennes</h4>
+        <ul>
+          <li><strong>Pulvérisations :</strong> Utilisation d’extraits naturels pour une couverture rapide et uniforme des feuilles et tiges.</li>
+          <li><strong>Insectes auxiliaires :</strong> Prédateurs naturels comme les coccinelles pour éliminer les nuisibles.</li>
+        </ul>
+        <h3 class="text-center mb-4">Parties Souterraines</h3>
+        <p>
+          Les parties souterraines, comprenant les racines et le sol, jouent un rôle fondamental dans l'alimentation et la stabilité des plantes. 
+        </p>
+        <h4>Biocontrôles adaptés aux parties souterraines</h4>
+        <ul>
+          <li><strong>Inoculations de micro-organismes bénéfiques :</strong> Les micro-organismes comme les bactéries et champignons bénéfiques peuvent être introduits dans le sol pour favoriser la santé des racines et limiter la prolifération des pathogènes.</li>
+          <li><strong>Traitements du sol :</strong> L'application de solutions naturelles, comme des extraits végétaux, renforce la résistance des plantes aux maladies du sol et améliore la structure du sol.</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <canvas id="partiesTraiteesChart"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 : Modes d'action -->
+<section id="mode_action" class="py-5 ">
+  <div class="container">
+    <div class="row align-items-center">
+      <h2 class="text-center mb-4">Modes d’action des biocontrôles</h2>
+      <div class="col-md-6">
+        <ul>
+          <li><strong>Répulsion :</strong> Utilise des huiles essentielles comme la menthe poivrée ou la citronnelle pour repousser les nuisibles (pucerons, moustiques) en perturbant leurs sens. Une méthode écologique qui éloigne sans tuer.</li><br>
+      
+          <li><strong>Prédation :</strong> L’introduction d’insectes auxiliaires, comme les coccinelles ou chrysopes, permet de réguler naturellement les nuisibles. Ces insectes se nourrissent des ravageurs et maintiennent un équilibre écologique.</li><br>
+      
+          <li><strong>Parasitisme :</strong> Utilise des guêpes parasitoïdes (<i>Trichogramma</i>) ou champignons pathogènes (<i>Beauveria bassiana</i>) qui parasitent les nuisibles. Les larves consomment les ravageurs de l’intérieur pour un contrôle ciblé.</li><br>
+      
+          <li><strong>Inhibition :</strong> Des micro-organismes comme les bactéries ou champignons (<i>Trichoderma</i>) inhibent les pathogènes en compétant avec eux ou en stimulant les défenses naturelles des plantes.</li><br>
+      
+          <li><strong>Ingestion :</strong> Repose sur l’absorption de substances par les nuisibles, perturbant leur métabolisme et réduisant efficacement leur population.</li><br>
+      
+          <li><strong>Autre :</strong> Comprend des fongicides de contact multi-sites, agissant simultanément sur plusieurs points pour stopper les pathogènes tout en limitant les résistances.</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <canvas id="modedaction"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4 : Groupes ciblés -->
+<section id="groupe_cible" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <canvas id="groupecible"></canvas>
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="text-center mb-4">Groupes Ciblés du Biocontrôle</h2>
+        <ul>
+          <li><strong>Ascomycètes :</strong> Les ascomycètes sont des champignons pathogènes qui peuvent causer des maladies sur diverses plantes. Le biocontrôle utilise des champignons antagonistes ou des micro-organismes pour inhiber leur développement et protéger les cultures.</li><br>
+      
+          <li><strong>Hémiptères :</strong> Ce groupe inclut des insectes tels que les cochenilles et les cicadelles. Les biocontrôles ciblent ces nuisibles en utilisant des prédateurs naturels, comme des coccinelles, ou des méthodes répulsives pour limiter leurs effets sur les plantes.</li><br>
+      
+          <li><strong>Lépidoptères :</strong> Les lépidoptères, comme les chenilles, sont des ravageurs fréquents des cultures. Les solutions de biocontrôle incluent des insectes auxiliaires qui parasitent les œufs et les larves, ou l’utilisation de bactéries spécifiques qui agissent contre ces nuisibles.</li><br>
+      
+          <li><strong>Pucerons :</strong> Les pucerons, un type d'hémiptères, sont souvent contrôlés par des prédateurs naturels comme les coccinelles ou par des traitements biologiques qui perturbent leur reproduction et leur alimentation, contribuant ainsi à leur régulation.</li><br>
+      
+          <li><strong>Acariens :</strong> Les acariens, notamment les tétranyques, sont des parasites qui affectent de nombreuses cultures. Le biocontrôle utilise des prédateurs tels que des acariens phytoseiids ou des agents pathogènes spécifiques pour limiter leur population et éviter les dommages aux plantes.</li><br>
+      
+          <li><strong>Autres groupes :</strong> D’autres groupes de nuisibles, tels que certains coléoptères ou pathogènes bactériens, sont également ciblés par des méthodes de biocontrôle adaptées pour chaque type de ravageur.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Section 5 : Conclusion et perspectives -->
+<section id="conclusion" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12">
+        <h2 class="text-center mb-4">Conclusion</h2>
+        <p>
+          Le biocontrôle offre une alternative prometteuse aux solutions chimiques traditionnelles en agriculture, en s'appuyant sur des approches écologiques et durables. 
+          En combinant des traitements ciblés et des modes d’action variés, il permet de préserver les écosystèmes tout en améliorant la productivité agricole.
+        </p>
+        <p>
+          Ce modèle innovant illustre une transition vers une agriculture plus respectueuse de l’environnement, où science et pratiques terrain s’allient pour répondre aux défis actuels et futurs.
+        </p>
+        <p class="text-center">
+          Ensemble, cultivons un avenir durable.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- Bouton de remontée -->
+<a href="#intro" id="backToIntro" class="btn btn-success" style="
+height: 70px;
+width: 70px;
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1000;
+display: none;
+padding: 10px 20px;
+border-radius: 50px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+font-size: 31px;">
+↑
+</a>
+
+<!-- Articles Section -->
+<section id="articles" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">En Savoir Plus</h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Première carte -->
+      <div class="col-md-12 col-lg-6">
+        <a href="Page1-Biocontrole.html" class="text-decoration-none">
+          <div class="card shadow-sm hover-effect h-100">
+            <img src="../img/art1.jpg" class="card-img-top" alt="Article 1">
+            <div class="card-body text-center">
+              <p class="fw-bold">Le Biocontrole</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Deuxième carte -->
+      <div class="col-md-12 col-lg-6 mx-auto">
+        <a href="Page2-Cibles.html" class="text-decoration-none">
+          <div class="card shadow-sm hover-effect h-100">
+            <img src="../img/cible2.jpg" class="card-img-top" alt="Article 5">
+            <div class="card-body text-center">
+              <p class="fw-bold">Les Cibles du Biocontrole</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Dernière carte centrée -->
+      <div class="col-md-12 col-lg-6">
+        <a href="Page4-info.html" class="text-decoration-none">
+          <div class="card shadow-sm hover-effect h-100">
+            <img src="../img/page5.jpg" class="card-img-top" alt="Article 4">
+            <div class="card-body text-center">
+              <p class="fw-bold">Parties et Méthodes</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="contact" class="py-5 bg-dark text-white text-center">
+  <h2>Contact</h2>
+  <p>&copy; 2024 Biodata - Tous droits réservés.</p>
+  <form class="d-flex flex-column align-items-center">
+    <div class="mb-3 w-50">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="email" placeholder="Votre e-mail" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script>
+<script src="../script/script.js"></script>
+</body>
+</html>

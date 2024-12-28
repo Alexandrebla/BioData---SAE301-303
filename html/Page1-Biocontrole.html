@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="../style/styles.css">
+  <script src="../script/Remonte.js" defer></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.0/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar navbar-expand-lg bg-white shadow sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><img src="../img/Logo vert.png" alt="" id="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#piliers" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Les 4 piliers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Impacts" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Impacts</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gra" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Familles</a></li>
+          <!-- Menu déroulant -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#articles" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
+              En Savoir Plus
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="Page1-Biocontrole.html">Le Biocontrole</a></li>
+              <li><a class="dropdown-item" href="Page2-Cibles.html">Les Cibles du Biocontrole</a></li>
+              <li><a class="dropdown-item" href="Page3-Partietraité.html">Parties et Méthodes</a></li>
+              <li><a class="dropdown-item" href="Page4-info.html">Informations supplémentaires</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#contact" style="margin-right: 12px; font-size: 23px; color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero2" class="d-flex align-items-center bg-success text-white">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">Le Biocontrole</h1>
+    <p class="lead">
+      Découvrez les méthodes naturelles pour protéger vos cultures et favoriser la biodiversité
+    </p>
+  </div>
+</section>
+
+<h1 class="titreM" id="intro">L'agriculture biologique : une approche durable</h1>
+
+<section class="container">
+  <div class="row">
+    <!-- Introduction -->
+<div class="bg-white p-4 rounded shadow-sm mb-5" >
+  <div class="bg-light p-3 rounded mb-3">
+      <h3>Le biocontrôle en chiffres</h3>
+  </div>
+  <div class="p-4">
+      <p>Le marché du biocontrôle représente aujourd'hui plus de <strong>200 millions d'euros</strong> en France. 
+      En <strong>2023</strong>, <strong>4500 agriculteurs</strong> ont adopté ces méthodes, couvrant 
+      <strong>2,9 millions d'hectares</strong>.</p>
+  </div>
+</div>
+  </div>
+
+  <div class="row" id="piliers">
+    <!-- Les 4 piliers -->
+    <div class="bg-white p-4 rounded shadow-sm mb-5">
+      <div class="bg-light p-3 rounded mb-4">
+          <h3>Les 4 piliers du biocontrôle</h3>
+      </div>
+      <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+              <div class="bg-light p-3 rounded h-100">
+                  <h4>Micro-organismes</h4>
+                  <p class="piliers"><strong>35%</strong> des solutions</p>
+                  <ul class="piliers">
+                      <li>Bactéries bénéfiques</li>
+                      <li>Champignons utiles</li>
+                      <li>Virus spécifiques</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+              <div class="bg-light p-3 rounded h-100">
+                  <h4>Substances naturelles</h4>
+                  <p class="piliers"><strong>30%</strong> des méthodes</p>
+                  <ul class="piliers">
+                      <li>Extraits végétaux</li>
+                      <li>Minéraux</li>
+                      <li>Huiles essentielles</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+              <div class="bg-light p-3 rounded h-100">
+                  <h4>Macro-organismes</h4>
+                  <p class="piliers"><strong>20%</strong> des solutions</p>
+                  <ul class="piliers">
+                      <li>Insectes auxiliaires</li>
+                      <li>Acariens prédateurs</li>
+                      <li>Nématodes utiles</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+              <div class="bg-light p-3 rounded h-100">
+                  <h4>Médiateurs chimiques</h4>
+                  <p class="piliers"><strong>15%</strong> des techniques</p>
+                  <ul class="piliers">
+                      <li>Phéromones</li>
+                      <li>Kairomones</li>
+                      <li>Allomones</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  </div>
+
+  <h3 id="Impacts">Impacts environnementaux</h3>
+
+<div class="row">
+  <div class="col-lg-6">
+    <p class="pourcentage">-50%</p>
+    <span>Réduction des pesticides</span>
+  </div>
+  <div class="col-lg-6">
+    <p class="pourcentage">+30%</p>
+    <span>Augmentation biodiversité</span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <p class="pourcentage">+40%</p>
+    <span>Amélioration sols</span>
+  </div>
+  <div class="col-lg-6">
+    <p class="pourcentage">-35%</p>
+    <span>Économie d'eau</span>
+  </div>
+</div>
+
+<h1 style="margin-top: 150px; margin-bottom: 120px; font-size: 60px;" class="titreM" id="gra">Les différentes familles de méthodes dans le biocontrole</h1>
+
+<div class="row" style="margin-bottom: 170px; ">
+  <div class="col-lg-5">
+      <canvas id="pieChart" width="400" height="400"></canvas>
+  </div>
+  <div class="col-md-1"></div>
+  <div class="col-lg-6">
+      <div class="card" style="background-color: #4BC0C0;">
+          <div class="card-body">
+              <strong>Micro-organismes : </strong>
+              Ce sont des organismes microscopiques, tels que des bactéries, des champignons, des levures ou des virus, utilisés en biocontrôle pour réguler les populations de ravageurs ou protéger les cultures contre les maladies. Par exemple, Bacillus thuringiensis est une bactérie employée pour lutter contre les insectes nuisibles.
+          </div>
+      </div>
+      <div class="card" style="background-color: #FF6384;">
+          <div class="card-body">
+              <strong>Macro-organismes : </strong>
+              Il s'agit d'organismes visibles à l'œil nu, comme les insectes prédateurs (coccinelles), les parasitoïdes (guêpes parasitoïdes) ou les nématodes, utilisés pour contrôler les ravageurs en agriculture. Ces alliés naturels agissent comme prédateurs, parasites ou compétiteurs des organismes nuisibles.
+          </div>
+      </div>
+      <div class="card" style="background-color: #36A2EB;">
+          <div class="card-body">
+              <strong>Substances naturelles : </strong>
+              Ce sont des composés d'origine naturelle, comme des extraits de plantes, des huiles essentielles ou des minéraux, utilisés pour protéger les cultures. Par exemple, l'azadirachtine extraite du neem est un insecticide naturel largement employé.
+          </div>
+      </div>
+      <div class="card" style="background-color: #FFCE56;">
+          <div class="card-body">
+              <strong>Médiateyrs chimiques : </strong>
+              Ce sont des molécules biologiquement actives, comme les phéromones ou les kairomones, qui influencent le comportement des organismes. En biocontrôle, elles sont souvent utilisées pour attirer, repousser ou perturber les insectes nuisibles (piégeage par phéromones).
+          </div>
+      </div>
+      <div class="card" style="background-color: #9966FF;">
+          <div class="card-body">
+              <strong>Plantes de services : </strong>
+              Ce sont des plantes introduites ou maintenues dans les agroécosystèmes pour fournir des services bénéfiques, tels que la protection des cultures principales. Elles peuvent attirer les pollinisateurs, abriter des auxiliaires ou concurrencer les adventices. Par exemple, le trèfle peut être utilisé pour fixer l’azote tout en favorisant la biodiversité.
+          </div>
+      </div>
+  </div>
+</div>
+</section>
+
+
+
+  <!-- Bouton de remontée -->
+<a href="#intro" id="backToIntro" class="btn btn-success" style="
+height: 70px;
+width: 70px;
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1000;
+display: none;
+padding: 10px 20px;
+border-radius: 50px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+font-size: 31px;">
+↑
+</a>
+
+  <!-- Articles Section -->
+<section id="articles" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">En Savoir Plus</h2>
+      <div class="row g-4 justify-content-center">
+        <!-- Première carte -->
+        <div class="col-md-12 col-lg-6">
+          <a href="Page2-Cibles.html" class="text-decoration-none">
+            <div class="card shadow-sm hover-effect h-100">
+              <img src="../img/cible2.jpg" class="card-img-top" alt="Article 1">
+              <div class="card-body text-center">
+                <p class="fw-bold">Les Cibles du Biocontrole</p>
+              </div>
+            </div>
+          </a>
+        </div>
+  
+        <!-- Deuxième carte -->
+        <div class="col-md-12 col-lg-6 mx-auto">
+          <a href="Page4-info.html" class="text-decoration-none">
+            <div class="card shadow-sm hover-effect h-100">
+              <img src="../img/page5.jpg" class="card-img-top" alt="Article 5">
+              <div class="card-body text-center">
+                <p class="fw-bold">Informations supplémentaires</p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Dernière carte centrée -->
+        <div class="col-md-12 col-lg-6">
+          <a href="Page3-Partietraité.html" class="text-decoration-none">
+            <div class="card shadow-sm hover-effect h-100">
+              <img src="../img/img_fondart5.jpg" class="card-img-top" alt="Article 4">
+              <div class="card-body text-center">
+                <p class="fw-bold">Parties et Méthodes</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer Section -->
+<footer id="contact" class="py-5 bg-dark text-white text-center">
+  <h2>Contact</h2>
+  <p>&copy; 2024 Biodata - Tous droits réservés.</p>
+  <form class="d-flex flex-column align-items-center">
+    <div class="mb-3 w-50">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="email" placeholder="Votre e-mail" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+  </form>
+</footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../script/défilement.js" defer></script>
+  <script>
+
+    d3.csv("data1.csv").then(function(data) {
+        const familyCounts = {
+            "Micro-organismes": 0,
+            "Macro-organismes": 0,
+            "Substances naturelles": 0,
+            "Médiateurs chimiques": 0,
+            "Plantes de service ": 0,
+            "Autres méthodes": 0
+        };
+
+        data.forEach(row => {
+            const family = row["Famille_méthode_de_contrôle_biologique"];
+            if (familyCounts.hasOwnProperty(family)) {
+                familyCounts[family] += 1;
+            } else {
+                familyCounts["Autres méthodes"] += 1;
+            }
+        });
+
+        const labels = Object.keys(familyCounts);
+        const values = Object.values(familyCounts);
+
+        const backgroundColors = [
+            '#4BC0C0', // Micro-organismes
+            '#FF6384', // Macro-organismes
+            '#36A2EB', // Substances naturelles
+            '#FFCE56', // Médiateurs chimiques
+            '#9966FF', // Plantes de services
+            '#008000'  // Autres méthodes
+        ];
+
+        const ctx = document.getElementById('pieChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: values,
+                    backgroundColor: backgroundColors
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(tooltipItem) {
+                                const value = tooltipItem.raw;
+                                const total = values.reduce((sum, v) => sum + v, 0);
+                                const percentage = ((value / total) * 100).toFixed(2);
+                                return `${tooltipItem.label}: ${value} (${percentage}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }).catch(error => {
+        console.error("Erreur lors du chargement du fichier CSV :", error);
+    });
+</script>
+</body>
+</body>
+</html>
